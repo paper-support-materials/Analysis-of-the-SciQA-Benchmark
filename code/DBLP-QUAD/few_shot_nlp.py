@@ -4,7 +4,6 @@ import json
 import time
 
 import torch
-from duckduckgo_search.cli import suggestions
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 from datasets import load_dataset
@@ -414,9 +413,9 @@ def runner(filename):
 
 
 def prepare_rebuttal():
-    # a, b = prepare_queries(7, method="nlp")
-    # c = {"queries": a, "suggestions": b}
-    # save_json("test.json", c)
+    a, b = prepare_queries(7, method="nlp")
+    c = {"queries": a, "suggestions": b}
+    save_json("test.json", c)
     # print(a)
     a = load_json("test.json")
     b = {}
@@ -430,26 +429,7 @@ def prepare_rebuttal():
 
 
 if __name__ == '__main__':
-    # save_embedding()
-    # prepare_rebuttal()
+    save_embedding()
+    prepare_rebuttal()
     runner("nlp_7_shots.json")
 
-
-# main(shots=3, method="test_a", prefix="test_a_")
-# main(shots=5, method="test_a", prefix="test_a_")
-# main(shots=7, method="test_a", prefix="test_a_")
-
-# main(shots=3, method="test_b", prefix="test_b_")
-# main(shots=5, method="test_b", prefix="test_b_")
-# main(shots=7, method="test_b", prefix="test_b_")
-# main(shots=1, prefix="nlp_GPT4_")
-# main(shots=3, prefix="nlp_GPT4_")
-# main(shots=5, prefix="nlp_GPT4_")
-# main(shots=7, prefix="nlp_GPT4_")
-
-# print(prepare_queries(7))
-# main(shots=1, method="random", prefix="random_")
-# main(shots=3, method="random", prefix="random_")
-# main(shots=5, method="random", prefix="random_")
-# main(shots=7, method="random", prefix="random_")
-#     main(shots=7, prefix="nlp_GPT-3.5_hand_")
