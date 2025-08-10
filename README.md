@@ -33,6 +33,13 @@ Jens Lehmann<sup>4,5</sup>
   - [Structure of the repository](#structure-of-the-repository)
   - [How to cite](#how-to-cite)
 
+## Abstract
+
+Translating scientific questions expressed in natural language into SPARQL queries that can be executed over knowledge graphs remains a significant challenge in the field of question answering. Recently, several prominent benchmarks, notably SciQA and DBLP-QuAD, have emerged to evaluate performance in this domain. In this paper, we provide a comprehensive analysis of the performance of language models on these benchmarks, assessing various optimization strategies. Our results indicate that the combined use of fine-tuning and prompting techniques, especially when incorporating strategic few-shot selection, produces excellent results on both benchmarks. These findings underscore an urgent need for more challenging benchmarks to better assess model capabilities. We identify key insights, common error patterns, and potential opportunities for transfer learning, and we discuss their implications for optimizing the performance of large language models in knowledge graph-based question answering tasks.
+
+## More info
+
+Answering scientific questions using large language models (LLMs) is a growing area of research. In our work, we explored how well these models can translate everyday scientific questions into SPARQL, a language used to query knowledge graphs (structured databases of information). We tested several modern models using two well-known benchmarks, SciQA and DBLP-QuAD. By combining techniques like fine-tuning and smart prompt design (known as few-shot prompting), we achieved strong results. However, we also found that the current benchmarks may be too easy for today’s advanced models. This suggests a need for more difficult tests to truly measure progress. We also identified common mistakes the models make and discussed how lessons from one domain can help improve performance in others. 
 
 ### Models employed
 
